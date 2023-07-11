@@ -13,7 +13,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <div class="progress__wrapper">
+    <span class="progress__bar"></span>
+  </div>
     <!--Navigation bar-->
 
     <header class="header">
@@ -35,7 +37,7 @@
             <ul class="menu">
                 <li><a href="#">WORK</a></li>
                 <li><a href="#">ABOUT</a></li>
-                <li class="subnav"><a href="#">CONTACT ˅</a>
+                <li class="subnav"><a href="#">CONTACT   <img src="images/Chevron.png" width="20px"></a>
                     <div class="subnav-content">
                     <a href="#">LinkedIn</a>
                     <a href="#">Behance</a>
@@ -174,8 +176,23 @@
             <li><a href="#">Behance</a></li>
         </ul>
     </footer>
-    
+    <script>
+			const body = document.body;
+			const progressBar = document.querySelector('.progress__bar');
+			console.log(progressBar)
+            const updateProgress = () => {
+				let scrollPos =
+					(window.scrollY / (body.scrollHeight - window.innerHeight)) * 100;
+                console.log(scrollPos)
+                progressBar.style.width = `${scrollPos}%`;
+				requestAnimationFrame(updateProgress);
+			};
+
+			updateProgress()
+		</script>
+   
 </body>
+<script src="js/index.js"></script>
 </html>
 
 

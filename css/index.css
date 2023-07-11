@@ -5,6 +5,10 @@
     --purple: #7F26EA;
     --blue: #0099FF;
     --trasparent: rgba(0,0,0,0);
+    --background: white;
+	--primary-blue: #625BFE;
+	--secondary-blue: #4bd7e3;
+	--text-color: #4d5b7c;
 } 
 
 * {
@@ -24,6 +28,35 @@ body {
   text-shadow: 0rem 0.5rem 0.938rem rgba(0, 0, 0, 0.3);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+.progress__wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+    z-index: 100;
+	width: 100%;
+	height: 10px;
+	background-color: #2c2c2c;
+}
+
+.progress__bar {
+	display: block;
+	width: 0;
+	height: inherit;
+	background: linear-gradient(
+		90deg, rgb(255, 192, 1) 0%, 
+		rgb(215, 226, 0) 16.15%, 
+		rgb(128, 211, 74) 33.85%, 
+		rgb(0, 214, 136) 50.52%,
+	    rgb(1, 208, 192) 66.15%, 
+		var(--secondary-blue) 81.25%, 
+		var(--primary-blue) 100%
+	);
+}
+
 a {
   text-decoration: none;
 }
@@ -35,7 +68,6 @@ ul {
 /* Header */
 .header {
   background-color: var(--trasparent);
-  box-shadow: 0.06rem 0.06rem 0.3rem 0rem var(--purple);
   position: relative;
   z-index: 999;
   top: 0;
