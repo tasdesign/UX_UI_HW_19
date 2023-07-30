@@ -14,7 +14,11 @@ const body = document.body;
 				requestAnimationFrame(updateProgress);
 			};
 
+
 			updateProgress();
+
+			updateProgress()
+
 
 // 
 

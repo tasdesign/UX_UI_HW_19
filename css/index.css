@@ -1,3 +1,4 @@
+
 body {
   background: linear-gradient(90deg, #7F26EA 0%, #FF89D8 100%);
   font-family: 'Poppins', sans-serif;
@@ -17,6 +18,18 @@ background-color: transparent;
 color: #fff;
 font-weight: 700;
 }
+
+:root {
+    --white: #f9f9f9;
+    --purple: #7F26EA;
+    --blue: #0099FF;
+    --trasparent: rgba(0,0,0,0);
+    --background: white;
+	--primary-blue: #625BFE;
+	--secondary-blue: #4bd7e3;
+	--text-color: #4d5b7c;
+} /* variables*/
+
 
 .navbar > li {
   color: #f2f2f2;
